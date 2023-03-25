@@ -8,19 +8,13 @@
 
 # Abstract
 
-This program is a website written in pure HTML, CSS and Javascript, without any framework.
-This website allows to visualise the most interesting movies of the OC MOvies Database.
-
-# Requirement
-
-OC Movies API from the following repository: https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
-
+This project consists of creating a website written in pure HTML, CSS and Vanilla Javascript, 
+allowing to visualise featured movies data fetched from the OC-Movies API.
 
 # Installation
-
-* Download and install OC Movies API from the following repository: https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
+* Download and install OC Movies API from the following repository: 
+* https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
 * Run the API
-
 
 
 # Running the application
