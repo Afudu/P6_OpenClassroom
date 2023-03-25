@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JustStreamIt</title>
+    <link href="css/my_style.css" rel="stylesheet">
+    <link href="css/short_codes.css" rel="stylesheet">
+  </head>
+  
+<body class="">
+
+  <!-- navbar -->  
+<header class="nav-header">
+  <div class="nav-container">
+      <a class="nav-brand" href="#">JustStreamIt</a>
+        <ul class="nav-bar">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+        </ul>
+  </div>
+</header>
+
+
+<div class="page-container">
+
+  <!-- This zone displays an image corresponding to the movie that has the best IMDb rating. -->
+<section id ="bestRatedMovieSection" class="section green">
+<!--   <div class="section-title d-none">This is the BestRatedMovies section</div>-->
+  <div class="best-movie-container">
+      <div id="bestRatedMovie_img" class="best-movie-image"> </div>
+        <div class="best-movie-text-area red">
+          <p id="bestRatedMovie_title" class=""></p>
+          <p id="bestRatedMovie_description" class=""></p>
+          <button type="button" class="best-movie-play-btn">Play</button>
+        </div>
+ </div>
+</section>
+
+
+  <!--Carousel_1 : This zone displays the seven next-best-rated movies -->
+<div class="section-title mt20">This is the Top7RatedMovies section</div>
+<section id ="top7MoviesSection" class="section p20  mb20 green">
+  <div class="carousel-container">
+    <div class="left-arrow" >  <button class="btn" type="button" > Prev </button> </div>
+    <div  class="carousel-inner ">
+     <div id="top7Movies_div"  class="carousel-movies"> </div>
+    </div>
+    <div class="right-arrow"> <button class="btn" type="button" > Next</button> </div>
+  </div>
+</section>
+
+
+<section id ="modalSection" class="container modal d-none">
+  <div class="modal-inner">
+    <span class="close-modal-btn right">&times;</span>
+    <p class="modal-img"></p>
+    <p class="modal-header">Details</p>
+    <ul class="modal-details"></ul>
+  </div>
+</section>
+
+</div>
+<!--end page-container-->
+
+     <script src="js/main_script.js"></script>
+     <script src="js/modal.js"></script>
+     <script src="js/anim.js"></script>
+
+  </body>
+</html>
