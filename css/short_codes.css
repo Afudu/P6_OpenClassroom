@@ -1,0 +1,125 @@
+
+/* display */
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d-grid {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d-none{
+  display:none;
+}
+
+
+/* positions */
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.mt80{
+   margin-top:80px;
+}
+
+.mt20{
+   margin-top:20px;
+}
+
+.mb80{
+   margin-bottom:80px;
+}
+
+.mb20{
+   margin-bottom:20px;
+}
+
+.pb20{
+padding-bottom: 20px
+}
+
+.p20{
+padding:20px;}
+
+.p10{
+padding:10px;}
+
+.p5{
+padding:5px;}
+
+
+/* Sizes */
+.h-100 {
+    min-height: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.w100{
+ width: 100%;
+}
+
+.w80{
+ width: 80%;
+}
+
+.w90{
+ width: 90%;
+}
+
+.w50{
+ width: 50%;
+}
+
+.w10{
+ width: 10%;
+}
+
+.w5{
+ width: 5.6%;
+}
+
+
+/* colors */
+
+.red{
+	 background-color: red;
+}
+
+.blue{
+	 background-color: blue;
+}
+
+.yellow{
+	 background-color: yellow;
+}
+
+.brown{
+	 background-color: brown;
+}
+
+.purple{
+	 background-color: purple;
+}
+
+.grey{
+	 background-color: grey;
+}
+
+.black{
+	 background-color: black;
+}
+.green{
+	 background-color: green;
+}
