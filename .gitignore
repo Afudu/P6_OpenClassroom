@@ -11,8 +11,11 @@ __pycache__/
 *.jpg
 *.jpeg
 *.zip
-anim.js
+carousel_animation.js
 img/
+css/save/
+js/old/
+copies/
 OCMovies-API-EN-FR/
 env_P6/
 
