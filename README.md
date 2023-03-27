@@ -8,21 +8,29 @@
 
 # Abstract
 
-This project consists of creating a website written in pure HTML, CSS and Vanilla Javascript, 
-allowing to visualise featured movies data fetched from the OC-Movies API.
+This project consists of creating a website for JustStreamIt, an organization known for publishing film rating,
+a website written in pure HTML, CSS and Vanilla Javascript without any other framework, 
+that allows to visualise featured movie's data.
 
-# Requirement
+In meeting the client's requirements, the website design should correspond to the mock-up provided, 
+and display five parts: The "Best Movie", the seven "Top-Rated Movies", and any three other categories.
 
-Latest version of Python must be installed for the project dependencies.
+The three optional categories shown along the two required in the designed website are: 
+Biography, Comedy and History.
 
-You can download the latest version for your system from : https://www.python.org/downloads/
+# Data
+The data is fetched from a local version of a home-made API named OCMovies-API, and available 
+on the following code repository: https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
 
 # Installation
 * Download and install OC Movies API from the following repository: 
 * https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
 * Then Run the API by starting the server.
 
+The README file in the repository provides the steps to install the dependencies and to launch the server.
 
 # Running the application
 
-* Open the file index.html in your favorite web browser
+* With the server running, open the file index.html in your favorite web browser
+
+Note: The API server must be running to view the fetched data.
