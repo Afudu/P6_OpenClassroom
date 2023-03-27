@@ -66,7 +66,7 @@ For subsequent launches of the API, move to the ocmovies-api root folder (step 7
 
 # Browsing the website
 
-* With the server running, move back to the root of P6_OpenClassroom and then 
+* With the server running, go to the root of the P6_OpenClassroom folder and then 
 launch the file index.html in your favorite web browser.
 
 Note: The API server must be running to view the fetched data.
