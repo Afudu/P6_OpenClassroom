@@ -34,3 +34,6 @@ The README file in the repository provides the steps to install the dependencies
 * With the server running, open the file index.html in your favorite web browser
 
 Note: The API server must be running to view the fetched data.
+
+# Browser compatibility
+The website has been tested on Google Chrome, Mozilla Firefox, Microsoft Edge, and renders as expected.
