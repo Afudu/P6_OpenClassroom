@@ -11,7 +11,6 @@ __pycache__/
 *.jpg
 *.jpeg
 *.zip
-carousel_animation.js
 img/
 css/save/
 js/old/
