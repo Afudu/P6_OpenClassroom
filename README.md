@@ -24,10 +24,11 @@ on the following code repository: https://github.com/OpenClassrooms-Student-Cent
 The following commands rely on the knowledge of how to use the terminal (Unix, macOS) or the command line (Windows).
 
 * Download and install OC Movies API from the following repository: 
-* https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
-* Then Run the API by starting the server.
+https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
 
-The README file in the repository provides the steps to install the project dependencies and to launch the server.
+* Start the API server.
+
+The README file in the repository provides the steps to install the project dependencies and to launch the API server.
 
 # Running the application
 
