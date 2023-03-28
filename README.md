@@ -31,7 +31,7 @@ The README file in the repository provides the steps to install the dependencies
 
 # Running the application
 
-* With the server running from the step above:
+With the server running from the step above:
 
  **1 - Get this repository**
    * $ git clone https://github.com/Afudu/P4_OpenClassroom.git
