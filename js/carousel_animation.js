@@ -11,6 +11,8 @@ for (let i = 0; i < 4; i++) {
     let carousel_items = document.getElementsByClassName("carousel-movies")[i];
     let position = positions[i]
 
+    setArrowVisibility(position, left_arrow, right_arrow)
+
     // Add EventListener to the right arrow.
     right_arrow.addEventListener("click", function() {
             position = Math.max(minPosition(), position - 1);
@@ -30,7 +32,6 @@ for (let i = 0; i < 4; i++) {
             carousel_items.style.transform = translate;
             console.log("left-clicked - position = " + position + " / Translate = " + translate);
         })
-    setArrowVisibility(position, left_arrow, right_arrow)
 }
 
 // Define the minimum position of a given carousel
