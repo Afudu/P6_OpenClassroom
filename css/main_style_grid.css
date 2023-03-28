@@ -96,10 +96,11 @@ body {
 }
 
 /******************* category movies section ********************/
-.btn {
+
+.left-arrow, .right-arrow {
   cursor: pointer;
   height:40px;
-  width:40px;
+  width:70px;
   border-radius: 50%;
   border-style:none;
   transition-duration: 0.4s;
@@ -107,27 +108,18 @@ body {
   font-wight:bold;
   color:#343a40;
   background-color: lightgrey;
-  align-items: center;
-}
-
-.left-arrow, .right-arrow {
-  cursor: pointer;
-  height:40px;
-  width:60px;
-  border-radius: 50%;
-  border-style:none;
-  transition-duration: 0.4s;
- font-size: 15px;
-  font-wight:bold;
-  color:#343a40;
-  background-color: lightgrey;
-  align-items: center;
+  align-content: center;
 }
 
 .btn:hover{
   background-color: #343a40;
   color: white;
 }
+
+.left-arrow{
+  visibility: hidden;
+}
+
 
 .left-arrow:hover, .right-arrow:hover{
   background-color: #343a40;
@@ -155,7 +147,7 @@ body {
 
 .carousel-movie img {
   width: 100%;
-  height: 100%;
+  max-width: 250px;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -218,7 +210,8 @@ em {
    }
 
 @media (min-width: 640px) {
-   .carousel-movies {width: 175%;}
+   .carousel-movies {width: 175%; grid-template-columns: repeat(7, auto);}
+
    }
 
 
@@ -233,10 +226,8 @@ em {
 }
 
 .footer_container {
-    width: auto;
-    max-width: 680px;
-    margin-right: auto;
-    margin-left: auto;
+ display:flex;
+ flex-direction:column;
+ align-items: center;
+
 }
-
-
