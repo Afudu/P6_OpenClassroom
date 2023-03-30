@@ -99,9 +99,11 @@ body {
 
 .left-arrow, .right-arrow {
   cursor: pointer;
-  height:40px;
-  width:70px;
-  border-radius: 50%;
+  height:50px;
+  width:50px;
+  border-radius: 5px;
+  /*-moz-border-radius:50%;
+  -webkit-border-radius:50%;*/
   border-style:none;
   transition-duration: 0.4s;
   font-size: 15px;
@@ -111,10 +113,6 @@ body {
   align-content: center;
 }
 
-.btn:hover{
-  background-color: #343a40;
-  color: white;
-}
 
 .left-arrow{
   visibility: hidden;
@@ -147,7 +145,7 @@ body {
 
 .carousel-movie img {
   width: 100%;
-  max-width: 250px;
+  height: 100%;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -207,12 +205,12 @@ em {
 
 @media (max-width: 640px){
    .best-movie-container{flex-direction:column; align-items: center;}
+   .left-arrow, .right-arrow { width: 200px}
    }
 
 @media (min-width: 640px) {
-   .carousel-movies {width: 175%; grid-template-columns: repeat(7, auto);}
+   .carousel-movies {width: 175%; }
 
-   }
 
 
 /******************* footer ********************/
