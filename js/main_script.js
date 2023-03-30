@@ -21,7 +21,7 @@ function displayBestRatedMovie(categoryFilter) {
          best_movie_description.innerText = data.description;
 
          let best_movie_img = document.getElementById("bestRatedMovie_img");
-         best_movie_img.innerHTML = "<img align='right' width='182' height='280' src='" + data.image_url +"'>";
+         best_movie_img.innerHTML = "<img align='right' width='182' height='280' src='"+data.image_url+"'>";
          best_movie_img.classList.add("open-modal-btn");
 
           // Step 5: Open modal and its attributes when button clicked
