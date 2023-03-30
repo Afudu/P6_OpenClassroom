@@ -14,7 +14,7 @@ that allows to visualise featured movie's data.
 
 In meeting the client's requirements, the website design corresponds to the mock-up provided in the project brief, 
 and displays five parts: the "Best Movie" (with the highest IMDb rating), the seven "Top-Rated Movies", 
-and the seven best movies of three optional categories: Biography, Comedy and History.
+and the seven best movies of three optional categories(Biography, Comedy and History).
 
 # Data
 The data is fetched from a local version of a home-made API named OCMovies-API, and available 
