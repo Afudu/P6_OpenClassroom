@@ -28,7 +28,8 @@ https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
 
 * Start the API server.
 
-The README file in the repository provides the steps to install the project dependencies and to launch the API server.
+Refer to the README file in the OCMovies-API-EN-FR repository for the steps to complete the installation 
+and launch the API server.
 
 # Running the application
 
