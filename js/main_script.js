@@ -1,12 +1,12 @@
 const endpoint = "http://localhost:8000/api/v1/titles/";
 
-
+// Script fetching best movie data
 function displayBestRatedMovie(categoryFilter) {
   // Step 1: Fetch best movie(= highest imdb) main data
   fetch(endpoint + categoryFilter)
     .then(response => response.json())
     .then(data => {
-      // Step 2: Get the best movie url / id
+      // Step 2: Get the best movie url and id
       let best_movie_url = data.results[0].url;
       let best_movie_id = data.results[0].id;
       // Step 3: Fetch the best movie data
@@ -34,24 +34,47 @@ function displayBestRatedMovie(categoryFilter) {
 
 
 //Script fetching and displaying movies of a given category
-function displayMovieCarousel(categoryFilter, containerId) {
+function displayMovieCarousel(categoryFilter, sectionId) {
 
-   const carouselContainer = document.getElementById(containerId);
+    const carouselSection = document.getElementById(sectionId);
+
+    const carousel_container_div = document.createElement('div');
+    carouselSection.appendChild(carousel_container_div);
+    carousel_container_div.classList.add("carousel-container");
+
+    const left_arrow_button = document.createElement('button');
+    carousel_container_div.appendChild(left_arrow_button);
+    left_arrow_button.classList.add("left-arrow");
+    left_arrow_button.innerText = "<";
+
+    const carousel_inner_div = document.createElement('div');
+    carousel_container_div.appendChild(carousel_inner_div);
+    carousel_inner_div.classList.add("carousel-inner");
+
+    const carousel_movies_div = document.createElement('div');
+    carousel_inner_div.appendChild(carousel_movies_div);
+    carousel_movies_div.classList.add("carousel-movies");
+
+    const right_arrow_button = document.createElement('button');
+    carousel_container_div.appendChild(right_arrow_button);
+    right_arrow_button.classList.add("right-arrow");
+    right_arrow_button.innerText = ">";
 
     fetch(endpoint + categoryFilter)
       .then(response => response.json())
       .then(data => {
         const movies = data.results;
 
-        // Create the image tag inside div element
+        // Add each image tag inside a div element
         movies.forEach((movie, index) => {
           const image = movie.image_url;
           const id = movie.id;
+
           const img_div = document.createElement('div');
           const img = document.createElement('img');
           img.src = image;
           img_div.appendChild(img);
-          carouselContainer.appendChild(img_div);
+          carousel_movies_div.appendChild(img_div);
           img_div.classList.add("carousel-movie");
           img_div.setAttribute("img-index", index);
 
@@ -64,23 +87,23 @@ function displayMovieCarousel(categoryFilter, containerId) {
       .catch(error => console.error(error));
 }
 
-
+// main script populating the website data
 function buildWebsite(){
 
     // 1 - Fetch and display Best Movie information
     displayBestRatedMovie('?page_size=7&sort_by=-imdb_score')
 
     // 2 - Fetch and display the Top7 movies of all categories in a carousel
-    displayMovieCarousel('?page_size=7&sort_by=-imdb_score', 'top7Movies_div')
+    displayMovieCarousel('?page_size=7&sort_by=-imdb_score', 'top7MoviesSection')
 
     // 3 - Fetch and display the Top7 Biography movies in a carousel
-    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=biography', 'top7BiographyMovies_div')
+    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=biography', 'top7BiographyMoviesSection')
 
     // 4 - Fetch and display the Top7 Comedy movies in a carousel
-    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=comedy', 'top7ComedyMovies_div')
+    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=comedy', 'top7ComedyMoviesSection')
 
     // 5 - Fetch and display the Top7 History movies in a carousel
-    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=history', 'top7HistoryMovies_div')
+    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=history', 'top7HistoryMoviesSection')
 
 }
 
