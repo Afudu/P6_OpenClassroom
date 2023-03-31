@@ -19,7 +19,7 @@ and the seven best movies of three optional categories(Biography, Comedy and His
 
 - A movie in a category is represented by the image of its cover.
 
-- Clicking on a featured movie’s image, opens a modal window displaying the following information:
+- Clicking on a featured movie’s image opens a modal window displaying the following information:
 
     The image of the movie cover,
     Title,
