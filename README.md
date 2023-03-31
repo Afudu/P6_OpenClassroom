@@ -9,7 +9,7 @@
 # Abstract
 
 This project consists of creating for a client, JustStreamIt, a website written in HTML, 
-CSS and Vanilla Javascript without any other framework that allows to visualise featured movie's data.
+CSS and Vanilla Javascript without any other framework, allowing to visualise featured movie's data.
 
 In meeting the client's requirements:
 
