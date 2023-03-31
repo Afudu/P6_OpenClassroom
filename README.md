@@ -21,18 +21,18 @@ and the seven best movies of three optional categories(Biography, Comedy and His
 
 - Clicking on a featured movie’s image, opens a modal window displaying the following information:
 
-    The image of the movie cover
-    Title
-    Full genre
-    Release date
-    MPAA rating
-    IMDb score
-    Director
-    List of actors
-    Duration
-    Country of origin
-    Box Office result
-    Movie summary
+    The image of the movie cover,
+    Title,
+    Full genre,
+    Release date,
+    MPAA rating,
+    IMDb score,
+    Director,
+    List of actors,
+    Duration,
+    Country of origin,
+    Box Office result,
+    Movie summary.
 
 # Data
 The data is fetched from a local version of a home-made API named OCMovies-API, and available 
