@@ -16,7 +16,7 @@ In meeting the client's requirements:
 - The website design corresponds to the mock-up provided in the project brief, and displays five categories:   
 the "Best Movie" (with the highest IMDb rating), the seven "Top-Rated Movies", and the seven best movies of three optional categories(Biography, Comedy and History).
 
-- A movie in a category is represented by the image of its cover.
+- A movie in a category is represented by its cover image.
 
 - Clicking on a featured movie’s image opens a modal window displaying the following information:
 
