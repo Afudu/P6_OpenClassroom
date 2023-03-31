@@ -101,8 +101,6 @@ body {
   height:50px;
   width:50px;
   border-radius: 5px;
-  /*-moz-border-radius:50%;
-  -webkit-border-radius:50%;*/
   border-style:none;
   transition-duration: 0.4s;
   font-size: 15px;
