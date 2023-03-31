@@ -8,13 +8,31 @@
 
 # Abstract
 
-This project consists of creating a website for JustStreamIt, an organization known for publishing film rating,
-a website written in pure HTML, CSS and Vanilla Javascript without any other framework, 
-that allows to visualise featured movie's data.
+This project consists of creating a website for a client, JustStreamIt, a website written in pure HTML, 
+CSS and Vanilla Javascript without any other framework, that allows to visualise featured movie's data.
 
-In meeting the client's requirements, the website design corresponds to the mock-up provided in the project brief, 
-and displays five parts: the "Best Movie" (with the highest IMDb rating), the seven "Top-Rated Movies", 
+In meeting the client's requirements:
+
+- The website design corresponds to the mock-up provided in the project brief, and displays five categories: 
+the "Best Movie" (with the highest IMDb rating), the seven "Top-Rated Movies", 
 and the seven best movies of three optional categories(Biography, Comedy and History).
+
+- A movie in a category is represented by the image of its cover.
+
+- Clicking on a featured movie’s image, opens a modal window displaying the following information:
+
+    The image of the movie cover
+    Title
+    Full genre
+    Release date
+    MPAA rating
+    IMDb score
+    Director
+    List of actors
+    Duration
+    Country of origin
+    Box Office result
+    Movie summary
 
 # Data
 The data is fetched from a local version of a home-made API named OCMovies-API, and available 
