@@ -94,16 +94,16 @@ function buildWebsite(){
     displayBestRatedMovie('?page_size=7&sort_by=-imdb_score')
 
     // 2 - Fetch and display the Top7 movies of all categories in a carousel
-    displayMovieCarousel('?page_size=7&sort_by=-imdb_score', 'top7MoviesSection')
+    displayMovieCarousel('?page_size=7&sort_by=-imdb_score', 'topMoviesSection')
 
     // 3 - Fetch and display the Top7 Biography movies in a carousel
-    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=biography', 'top7BiographyMoviesSection')
+    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=biography', 'topBiographyMoviesSection')
 
     // 4 - Fetch and display the Top7 Comedy movies in a carousel
-    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=comedy', 'top7ComedyMoviesSection')
+    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=comedy', 'topComedyMoviesSection')
 
     // 5 - Fetch and display the Top7 History movies in a carousel
-    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=history', 'top7HistoryMoviesSection')
+    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=history', 'topHistoryMoviesSection')
 
 }
 

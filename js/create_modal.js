@@ -58,9 +58,9 @@ function createModal(movieId) {
 		country_li.innerHTML = "<em>Country of origin: </em>" + data.countries;
 		modal_details[0].appendChild(country_li);
 
-		let box_office_results = document.createElement("li");
+		let box_office_results_li = document.createElement("li");
 		box_office_results.innerHTML = "<em>Box Office result: </em>" + data.worldwide_gross_income;
-		modal_details[0].appendChild(box_office_results);
+		modal_details[0].appendChild(box_office_results_li);
 
 		let description_li = document.createElement("li");
 		description_li.innerHTML = "<em>Movie summary: </em>" + data.description;
