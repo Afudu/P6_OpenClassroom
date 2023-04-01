@@ -1,46 +1,59 @@
 // Script adding event listeners to the left and right arrows in the carousels.
 
-// Define variables
+// Set the constant variables
+const nbrOfCarousels = 4
+const totalNumberOfImages = 7
+const nbrOfImagesShownDesktopView = 4
+const nbrOfImagesShownMobileView = 1
+const initialPositions = [0, 0, 0, 0]
 const desktop = window.matchMedia("(min-width: 640px)");
-const positions = [0, 0, 0, 0]
 
+// add event listeners to the arrows of each block
 for (let i = 0; i < 4; i++) {
 
     let right_arrow = document.getElementsByClassName("right-arrow")[i];
     let left_arrow = document.getElementsByClassName("left-arrow")[i];
-    let carousel_items = document.getElementsByClassName("carousel-movies")[i];
-    let position = positions[i]
-
-    setArrowVisibility(position, left_arrow, right_arrow)
+    let carousel_movies = document.getElementsByClassName("carousel-movies")[i];
+    let position = initialPositions[i]
 
     // Add EventListener to the right arrow.
     right_arrow.addEventListener("click", function() {
             position = Math.max(minPosition(), position - 1);
-            positions[i] = position
+            initialPositions[i] = position
             setArrowVisibility(position, left_arrow, right_arrow);
-            let translate = "translate(" + (1 / 7) * 100 * position + "%)"
-            carousel_items.style.transform = translate;
+            let translate = "translate(" + (1 / totalNumberOfImages) * 100 * position + "%)"
+            carousel_movies.style.transform = translate;
             console.log("right-clicked - position = " + position + " / minPosition = " + minPosition());
-        })
+        });
 
-    // Add EventListener to the right arrow.
+    // Add EventListener to the left arrow.
     left_arrow.addEventListener("click", function() {
             position = Math.min(0, position + 1);
-            positions[i] = position
+            initialPositions[i] = position
             setArrowVisibility(position, left_arrow, right_arrow);
-            let translate = "translate(" + (1 / 7) * 100 * position + "%)"
-            carousel_items.style.transform = translate;
-            console.log("left-clicked - position = " + position + " / Translate = " + translate);
-        })
-}
+            let translate = "translate(" + (1 / totalNumberOfImages) * 100 * position + "%)"
+            carousel_movies.style.transform = translate;
+            console.log("left-clicked - position = " + position + " / minPosition = " + minPosition());
+            });
+
+    // Add event listener for handing switching from desktop to mobile or vice versa.
+    desktop.addEventListener("change", function() {
+        position = Math.max(minPosition(), position);
+        initialPositions[i] = position
+        setArrowVisibility(position, left_arrow, right_arrow);
+        var translate = "translate(" + (1 / totalNumberOfImages) * 100 * position + "%)"
+        carousel_movies.style.transform = translate;
+        console.log("change occurred - new position = "+ position + " / minPosition = " + minPosition());
+        });
+   }
 
 // Define the minimum position of a given carousel
 function minPosition() {
    let minPosition;
     if (desktop.matches) {
-       minPosition = -3;
+       minPosition = nbrOfImagesShownDesktopView - totalNumberOfImages;
     } else {
-       minPosition = -6;
+       minPosition = nbrOfImagesShownMobileView - totalNumberOfImages;
     }
     return minPosition;
 }
@@ -58,5 +71,4 @@ function setArrowVisibility(position, left_arrow, right_arrow) {
         right_arrow.style.visibility = "visible"
     }
 }
-
 
