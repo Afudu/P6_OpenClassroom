@@ -1,19 +1,25 @@
 const endpoint = "http://localhost:8000/api/v1/titles/";
+const bestMoviesFilter = '?sort_by=-imdb_score'
+const nbrOfCategoryImages  = 7
+const pageSize = '&page_size='+ nbrOfCategoryImages
+const genreFilterRoot = '&genre_contains='
+const categories = ['biography', 'comedy', 'history']
+
 
 // Script fetching best movie data
-function displayBestRatedMovie(categoryFilter) {
-  // Step 1: Fetch best movie(= highest imdb) main data
-  fetch(endpoint + categoryFilter)
+function displayBestRatedMovie(bestMoviesFilter) {
+  // Fetch best movie(= highest imdb) main data
+  fetch(endpoint + bestMoviesFilter)
     .then(response => response.json())
     .then(data => {
-      // Step 2: Get the best movie url and id
+      // Get the best movie url and id
       let best_movie_url = data.results[0].url;
       let best_movie_id = data.results[0].id;
-      // Step 3: Fetch the best movie data
+      // Fetch the best movie data
       fetch(best_movie_url)
       .then(response => response.json())
       .then(data => {
-         // Step 4: Add best movie information
+         // Add best movie information
          let best_movie_title = document.getElementById("bestRatedMovie_title");
          best_movie_title.innerText = data.title;
 
@@ -24,7 +30,7 @@ function displayBestRatedMovie(categoryFilter) {
          best_movie_img.innerHTML = "<img align='right' width='182' height='280' src='"+data.image_url+"'>";
          best_movie_img.classList.add("open-modal-btn");
 
-          // Step 5: Open modal and its attributes when button clicked
+          // Open modal and its attributes when button clicked
          best_movie_img.addEventListener("click", function () {
 		 createModal(best_movie_id);})
       })
@@ -87,23 +93,22 @@ function displayMovieCarousel(categoryFilter, sectionId) {
       .catch(error => console.error(error));
 }
 
+
 // main script populating the website data
 function buildWebsite(){
 
     // 1 - Fetch and display Best Movie information
-    displayBestRatedMovie('?page_size=7&sort_by=-imdb_score')
+    displayBestRatedMovie(bestMoviesFilter)
 
-    // 2 - Fetch and display the Top movies of all categories in a carousel
-    displayMovieCarousel('?page_size=7&sort_by=-imdb_score', 'topMoviesSection')
+     // 2 - Fetch and display Top movies of all categories in a carousel
+    displayMovieCarousel(bestMoviesFilter + pageSize, 'topRatedMoviesSection')
 
-    // 3 - Fetch and display the Top Biography movies in a carousel
-    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=biography', 'topBiographyMoviesSection')
-
-    // 4 - Fetch and display the Top Comedy movies in a carousel
-    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=comedy', 'topComedyMoviesSection')
-
-    // 5 - Fetch and display the Top History movies in a carousel
-    displayMovieCarousel('?sort_by=-imdb_score&page_size=7&genre_contains=history', 'topHistoryMoviesSection')
+    // 3 - Fetch and display Top movies for each of the three optional categories in a carousel
+    for (let i = 0; i < categories.length; i++)  {
+    let categoryFilter = bestMoviesFilter + pageSize + genreFilterRoot + categories[i]
+    let sectionId = categories[i] + 'MoviesSection'
+    displayMovieCarousel(categoryFilter, sectionId)
+    }
 
 }
 
