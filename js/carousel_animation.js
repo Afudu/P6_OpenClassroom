@@ -2,14 +2,13 @@
 
 // Set the constant variables
 const nbrOfCarousels = 4
-const totalNumberOfImages = 7
 const nbrOfImagesShownDesktopView = 4
 const nbrOfImagesShownMobileView = 1
 const initialPositions = [0, 0, 0, 0]
 const desktop = window.matchMedia("(min-width: 640px)");
 
 // add event listeners to the arrows of each block
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < nbrOfCarousels; i++) {
 
     let right_arrow = document.getElementsByClassName("right-arrow")[i];
     let left_arrow = document.getElementsByClassName("left-arrow")[i];
@@ -21,7 +20,7 @@ for (let i = 0; i < 4; i++) {
             position = Math.max(minPosition(), position - 1);
             initialPositions[i] = position
             setArrowVisibility(position, left_arrow, right_arrow);
-            let translate = "translate(" + (1 / totalNumberOfImages) * 100 * position + "%)"
+            let translate = "translate(" + (1 / nbrOfCategoryImages) * 100 * position + "%)"
             carousel_movies.style.transform = translate;
             console.log("right-clicked - position = " + position + " / minPosition = " + minPosition());
         });
@@ -31,7 +30,7 @@ for (let i = 0; i < 4; i++) {
             position = Math.min(0, position + 1);
             initialPositions[i] = position
             setArrowVisibility(position, left_arrow, right_arrow);
-            let translate = "translate(" + (1 / totalNumberOfImages) * 100 * position + "%)"
+            let translate = "translate(" + (1 / nbrOfCategoryImages) * 100 * position + "%)"
             carousel_movies.style.transform = translate;
             console.log("left-clicked - position = " + position + " / minPosition = " + minPosition());
             });
@@ -41,7 +40,7 @@ for (let i = 0; i < 4; i++) {
         position = Math.max(minPosition(), position);
         initialPositions[i] = position
         setArrowVisibility(position, left_arrow, right_arrow);
-        var translate = "translate(" + (1 / totalNumberOfImages) * 100 * position + "%)"
+        var translate = "translate(" + (1 / nbrOfCategoryImages) * 100 * position + "%)"
         carousel_movies.style.transform = translate;
         console.log("change occurred - new position = "+ position + " / minPosition = " + minPosition());
         });
@@ -51,9 +50,9 @@ for (let i = 0; i < 4; i++) {
 function minPosition() {
    let minPosition;
     if (desktop.matches) {
-       minPosition = nbrOfImagesShownDesktopView - totalNumberOfImages;
+       minPosition = nbrOfImagesShownDesktopView - nbrOfCategoryImages;
     } else {
-       minPosition = nbrOfImagesShownMobileView - totalNumberOfImages;
+       minPosition = nbrOfImagesShownMobileView - nbrOfCategoryImages;
     }
     return minPosition;
 }
