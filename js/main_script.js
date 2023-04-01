@@ -109,7 +109,6 @@ function buildWebsite(){
     let sectionId = categories[i] + 'MoviesSection'
     displayMovieCarousel(categoryFilter, sectionId)
     }
-
 }
 
 buildWebsite()

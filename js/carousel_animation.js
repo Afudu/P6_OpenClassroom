@@ -70,4 +70,3 @@ function setArrowVisibility(position, left_arrow, right_arrow) {
         right_arrow.style.visibility = "visible"
     }
 }
-
