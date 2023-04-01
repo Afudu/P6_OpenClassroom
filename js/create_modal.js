@@ -13,7 +13,6 @@ function createModal(movieId) {
     modal.style.display = "block";
    // overlay.style.display = "block";
 
-
     fetch(endpoint + movieId)
       .then(function(response) {
         if (response.ok) {
@@ -81,14 +80,13 @@ function createModal(movieId) {
 		modal_details_div.innerHTML = "";
 		document.body.style.overflowY = "auto";
 		}
-
 	})
     .catch(function(error) {
       console.error('Error:', error);
 	});
 };
 
-
+//format date from us to eu
 function formatDate(inputDate) {
   // Split the date string into year, month, and day
   const parts = inputDate.split("-");
@@ -100,6 +98,7 @@ function formatDate(inputDate) {
   return `${day}/${month}/${year}`;
 }
 
+//replace null values with text
 function replaceNullToValue(str) {
   if (str === null) {
     return "Information not available";
