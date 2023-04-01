@@ -48,7 +48,7 @@ body {
     color: grey;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link.active {
     color: #fff;
 }
 
@@ -60,7 +60,6 @@ body {
   margin-right:auto;
   width:70%;
 }
-
 
 /******************* best movie section  ********************/
 
@@ -110,11 +109,9 @@ body {
   align-content: center;
 }
 
-
 .left-arrow{
   visibility: hidden;
 }
-
 
 .left-arrow:hover, .right-arrow:hover{
   background-color: #343a40;
@@ -152,7 +149,6 @@ body {
   transition: 0.4s;
 }
 
-
 /******************* Modal********************/
 
 li {
@@ -179,10 +175,10 @@ em {
 .modal-inner {
   background-color: lightgrey;
   color: #1f4d4d;
-  margin: 15% auto;
+  margin: 20% auto;
   padding: 20px;
   border-radius: 15px;
-  width: 50%;
+  width: 70%;
 }
 
 .close-modal-btn {
@@ -197,7 +193,6 @@ em {
   cursor: pointer;
 }
 
-
 /******************* Media queries ********************/
 
 @media (max-width: 640px){
@@ -207,8 +202,8 @@ em {
 
 @media (min-width: 640px) {
    .carousel-movies {width: 175%; }
+   .modal-inner { margin: 10% auto;}
 }
-
 
 /******************* footer ********************/
 
