@@ -17,7 +17,7 @@ body {
   width:70%;
   margin-left:15%;
   background: #343a40;
-  z-index:1000;
+  z-index:1;
 }
 
 .nav-container {
@@ -59,6 +59,7 @@ body {
   margin-left:auto;
   margin-right:auto;
   width:70%;
+
 }
 
 /******************* best movie section  ********************/
@@ -169,7 +170,7 @@ em {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .modal-inner {
@@ -198,11 +199,12 @@ em {
 @media (max-width: 640px){
    .best-movie-container{flex-direction:column; align-items: center;}
    .left-arrow, .right-arrow { width: 200px}
+   .modal{overflow: auto;}
    }
 
 @media (min-width: 640px) {
    .carousel-movies {width: 175%; }
-   .modal-inner { margin: 10% auto;}
+   .modal-inner { margin: 8% auto;}
 }
 
 /******************* footer ********************/
