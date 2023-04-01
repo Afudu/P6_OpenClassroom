@@ -46,7 +46,7 @@ https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
 * Start the API server.
 
 Refer to the README file in the OCMovies-API-EN-FR repository for the steps to complete the installation 
-and launch the API server.
+and launching of the API server.
 
 # Running the application
 
@@ -64,4 +64,5 @@ With the server running from the step above:
 Note: The API server must be running to view the fetched data.
 
 # Browser compatibility
-The website has been tested on Google Chrome, Mozilla Firefox, Microsoft Edge, and renders as expected.
+The website has been tested on Google Chrome (Version 111.0.5563.147), Mozilla Firefox (Version 111.0.1), 
+Microsoft Edge (Version 111.0.1661.54), and renders as expected.
