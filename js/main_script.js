@@ -5,7 +5,6 @@ const pageSize = '&page_size='+ nbrOfCategoryImages
 const genreFilterRoot = '&genre_contains='
 const categories = ['biography', 'comedy', 'history']
 
-
 // Script fetching best movie data
 function displayBestRatedMovie(bestMoviesFilter) {
   // Fetch best movie(= highest imdb) main data
@@ -37,7 +36,6 @@ function displayBestRatedMovie(bestMoviesFilter) {
      })
     .catch(error => console.error(error));
 }
-
 
 //Script fetching and displaying movies of a given category
 function displayMovieCarousel(categoryFilter, sectionId) {
@@ -86,13 +84,10 @@ function displayMovieCarousel(categoryFilter, sectionId) {
 
           // Add a click event listener to each image to open a modal
 		  img_div.addEventListener("click", function () {createModal(id) })
-
           })
-
       })
       .catch(error => console.error(error));
 }
-
 
 // main script populating the website data
 function buildWebsite(){
