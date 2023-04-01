@@ -11,6 +11,7 @@ function createModal(movieId) {
     const close_modal_btn = document.getElementsByClassName("close-modal-btn")[0];
     modal.style.display = "block";
 
+
     fetch(endpoint + movieId)
       .then(function(response) {
         if (response.ok) {
@@ -68,21 +69,16 @@ function createModal(movieId) {
 		description_li.innerHTML = "<em>Movie summary: </em>" + data.description;
 		modal_details_div.appendChild(description_li);
 
+		document.body.style.overflowY = "hidden";
+
 		// Close and remove details when "X" button clicked.
 		close_modal_btn.onclick = function() {
 		modal.style.display = "none";
 		modal_img_div.innerHTML = "";
 		modal_details_div.innerHTML = "";
+		document.body.style.overflowY = "auto";
 		}
 
-    	// Close and remove details when user clicked away from window.
-		window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-			modal_img_img.innerHTML = "";
-			modal_details_div.innerHTML = "";
-		  	}
-	  	}
 	})
     .catch(function(error) {
       console.error('Error:', error);
