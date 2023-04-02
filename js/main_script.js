@@ -2,7 +2,7 @@ const endpoint = "http://localhost:8000/api/v1/titles/";
 const bestMoviesFilter = '?sort_by=-imdb_score'
 const nbrOfCategoryImages  = 7
 const pageSize = '&page_size='+ nbrOfCategoryImages
-const genreFilterRoot = '&genre_contains='
+const categoryFilterRoot = '&genre_contains='
 const categories = ['biography', 'comedy', 'history']
 
 // Script fetching best movie data
@@ -100,7 +100,7 @@ function buildWebsite(){
 
     // 3 - Fetch and display Top movies for each of the three optional categories in a carousel
     for (let i = 0; i < categories.length; i++)  {
-    let categoryFilter = bestMoviesFilter + pageSize + genreFilterRoot + categories[i]
+    let categoryFilter = bestMoviesFilter + pageSize + categoryFilterRoot + categories[i]
     let sectionId = categories[i] + 'MoviesSection'
     displayMovieCarousel(categoryFilter, sectionId)
     }
