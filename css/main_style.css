@@ -23,7 +23,7 @@ body {
 .nav-container {
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    gap: 30%;
     padding: 20px;
 }
 
@@ -52,10 +52,46 @@ body {
     color: #fff;
 }
 
+/******************* dropdown **************************/
+.dropdown-btn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 /******************* main container ********************/
 .page-container{
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-left:auto;
   margin-right:auto;
   width:70%;
@@ -214,10 +250,11 @@ em {
    .best-movie-container{flex-direction:column; align-items: center;}
    .left-arrow, .right-arrow { width: 200px}
    .modal{overflow: auto;}
+   .nav-container{gap: 10%;}
    }
 
 @media (min-width: 640px) {
-   .carousel-movies {width: 175%; }
+   .carousel-movies {width: 175%; }  /* 700% / 4 = 175% */
    .modal-inner { margin: 7% auto;}
 }
 
