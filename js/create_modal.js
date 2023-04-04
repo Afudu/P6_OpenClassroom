@@ -5,24 +5,16 @@
 
 function createModal(movieId) {
     const modal = document.getElementById("modalSection");
-    const overlay = document.querySelector(".overlay");
     // Modal opening based on id => img = first class element
     const modal_img_div = document.getElementsByClassName("modal-img")[0];
     const modal_details_div = document.getElementsByClassName("modal-details")[0];
     const close_modal_btn = document.getElementsByClassName("close-modal-btn")[0];
     modal.style.display = "block";
-   // overlay.style.display = "block";
 
     fetch(endpoint + movieId)
-      .then(function(response) {
-        if (response.ok) {
-            return response.json();
-        }
-	  })
-      .then(function(data) {
-
+      .then(response => response.json())
+      .then(data =>{
       	// Open modal and add details
-
 		modal_img_div.innerHTML = "<img width='50'  src='" +  data.image_url + "'>";
 
 		let title_li = document.createElement("li");
@@ -75,7 +67,6 @@ function createModal(movieId) {
 		// Close and remove details when "X" button clicked.
 		close_modal_btn.onclick = function() {
 		modal.style.display = "none";
-		overlay.style.display = "none";
 		modal_img_div.innerHTML = "";
 		modal_details_div.innerHTML = "";
 		document.body.style.overflowY = "auto";
