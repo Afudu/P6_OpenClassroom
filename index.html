@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en" >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
     <link href="css/short_codes.css" rel="stylesheet">
   </head>
   
-<body id="content-body">
+<body>
 
   <!-- navbar -->  
 <header class="nav-header">
@@ -24,10 +24,10 @@
 
 <div class="page-container">
 
-    <!-- This zone displays an image corresponding to the movie that has the best IMDb rating. -->
-  <div class="section-title p10 mt10 bg-beige text-center">Best Movie</div>
-  <section id ="bestRatedMovieSection" class="section p20 ">
-    <div class="best-movie-container">
+  <!-- This zone displays an image corresponding to the movie that has the best IMDb rating. -->
+  <section id ="bestRatedMovieSection" class="mb40 mt20">
+    <div class="section-title p10 bg-beige text-center">Best Movie</div>
+    <div class="best-movie-container mt20">
         <div id="bestRatedMovie_img" class="best-movie-image"> </div>
           <div class="best-movie-text-area ">
             <p id="bestRatedMovie_title" class="bold"></p>
@@ -38,32 +38,31 @@
   </section>
 
       <!--Carousel_1 : This zone displays the best-rated movies -->
-    <div class="section-title p10 mt10 bg-beige text-center">Top-Rated Movies</div>
-    <section id ="topRatedMoviesSection" class="p20">
+    <section id ="topRatedMoviesSection" class="mb40">
+      <div class="section-title p10 mb20 bg-beige text-center">Top-Rated Movies</div>
     </section>
 
 
      <!--Carousel_2 : Top Biography movies-->
-    <div class="section-title p10 mt10 bg-beige text-center">Biography</div>
-    <section id ="biographyMoviesSection" class="p20">
+    <section id ="biographyMoviesSection" class="mb40">
+      <div class="section-title p10 mb20 bg-beige text-center">Biography</div>
     </section>
 
 
      <!--Carousel_3 : Top Documentary movies-->
-    <div class="section-title p10 mt10 bg-beige text-center">Comedy</div>
-    <section id ="comedyMoviesSection" class="p20">
+    <section id ="comedyMoviesSection" class="mb40">
+       <div class="section-title p10 mb20 bg-beige text-center">Comedy</div>
     </section>
 
      <!-- Carousel_4 : Top History movies-->
-    <div class="section-title p10 mt10 bg-beige text-center">History</div>
-    <section id ="historyMoviesSection" class="p20">
+    <section id ="historyMoviesSection" class="mb40">
+       <div class="section-title p10 mb20 bg-beige text-center">History</div>
     </section>
 
 
-    <div class="overlay d-none"></div>
      <!-- Modal section-->
-    <section id ="modalSection" class="container modal d-none">
-      <div class="modal-inner">
+    <section id ="modalSection" class="modal">
+      <div class="modal-inner shadow">
         <span class="close-modal-btn right">&times;</span>
         <p class="modal-img"></p>
         <p class="modal-header bold">Movie information</p>
@@ -80,7 +79,7 @@
 </footer>
 <!--  end footer-->
 
-<!--  scripts in order-->
+<!--  js scripts in order-->
 <script src="js/main_script.js"></script>
 <script src="js/create_modal.js"></script>
 <script src="js/carousel_animation.js"></script>
