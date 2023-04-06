@@ -1,7 +1,7 @@
 const endpoint = "http://localhost:8000/api/v1/titles/";
 const bestMoviesFilter = '?sort_by=-imdb_score'
 const nbrOfCategoryImages  = 7
-const pageSize = '&page_size='+ nbrOfCategoryImages
+const pageSizeFilter = '&page_size='+ nbrOfCategoryImages
 const categoryFilterRoot = '&genre_contains='
 const categories = ['biography', 'comedy', 'history']
 
@@ -96,13 +96,13 @@ function buildWebsite(){
     displayBestRatedMovie(bestMoviesFilter)
 
      // 2 - Fetch and display Top movies of all categories in a carousel
-    displayMovieCarousel(bestMoviesFilter + pageSize, 'topRatedMoviesSection')
+    displayMovieCarousel(bestMoviesFilter + pageSizeFilter, 'topRatedMoviesSection')
 
     // 3 - Fetch and display Top movies for each of the three optional categories in a carousel
     for (let i = 0; i < categories.length; i++)  {
-    let categoryFilter = bestMoviesFilter + pageSize + categoryFilterRoot + categories[i]
-    let sectionId = categories[i] + 'MoviesSection'
-    displayMovieCarousel(categoryFilter, sectionId)
+        let categoryFilter = bestMoviesFilter + pageSizeFilter + categoryFilterRoot + categories[i]
+        let sectionId = categories[i] + 'MoviesSection'
+        displayMovieCarousel(categoryFilter, sectionId)
     }
 }
 
