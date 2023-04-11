@@ -3,7 +3,7 @@
 // MPAA rating ; IMDb scoreDirector ; List of actors ; Duration ; Country of origin ;
 // Box Office result ; Movie summary
 
-function createModal(movieId) {
+function createModal(movie_id) {
     const modal = document.getElementById("modalSection");
     // Modal opening based on id => img = first class element
     const modal_img_div = document.getElementsByClassName("modal-img")[0];
@@ -11,10 +11,16 @@ function createModal(movieId) {
     const close_modal_btn = document.getElementsByClassName("close-modal-btn")[0];
     modal.style.display = "block";
 
-    fetch(endpoint + movieId)
-      .then(response => response.json())
-      .then(data =>{
+    fetch(endpoint + movie_id)
+      .then(function(response) {
+        if (response.ok) {
+            return response.json();
+        }
+	  })
+      .then(function(data) {
+
       	// Open modal and add details
+
 		modal_img_div.innerHTML = "<img width='50'  src='" +  data.image_url + "'>";
 
 		let title_li = document.createElement("li");
@@ -78,9 +84,9 @@ function createModal(movieId) {
 };
 
 //format date from us to eu
-function formatDate(inputDate) {
+function formatDate(input_date) {
   // Split the date string into year, month, and day
-  const parts = inputDate.split("-");
+  const parts = input_date.split("-");
   const year = parts[0];
   const month = parts[1];
   const day = parts[2];
