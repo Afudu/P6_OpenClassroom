@@ -225,7 +225,7 @@ em {
     background-color: #f8f9fa;
 }
 
-.footer_container {
+.footer-container {
  display:flex;
  flex-direction:column;
  align-items: center;
