@@ -1,14 +1,14 @@
 const endpoint = "http://localhost:8000/api/v1/titles/";
-const bestMoviesFilter = '?sort_by=-imdb_score'
-const nbrOfCategoryImages  = 7
-const pageSizeFilter = '&page_size='+ nbrOfCategoryImages
-const categoryFilterRoot = '&genre_contains='
+const best_movies_filter = '?sort_by=-imdb_score'
+const number_of_category_images  = 7
+const page_size_filter = '&page_size='+ number_of_category_images
+const category_filter_root = '&genre_contains='
 const categories = ['biography', 'comedy', 'history']
 
 // Script fetching best movie data
-function displayBestRatedMovie(bestMoviesFilter) {
+function displayBestRatedMovie(best_movies_filter) {
   // Fetch best movie(= highest imdb) main data
-  fetch(endpoint + bestMoviesFilter)
+  fetch(endpoint + best_movies_filter)
     .then(response => response.json())
     .then(data => {
       // Get the best movie url and id
@@ -38,12 +38,12 @@ function displayBestRatedMovie(bestMoviesFilter) {
 }
 
 //Script fetching and displaying movies of a given category
-function displayMovieCarousel(categoryFilter, sectionId) {
+function displayMovieCarousel(category_filter, section_id) {
 
-    const carouselSection = document.getElementById(sectionId);
+    const carousel_section = document.getElementById(section_id);
 
     const carousel_container_div = document.createElement('div');
-    carouselSection.appendChild(carousel_container_div);
+    carousel_section.appendChild(carousel_container_div);
     carousel_container_div.classList.add("carousel-container");
 
     const left_arrow_button = document.createElement('button');
@@ -64,7 +64,7 @@ function displayMovieCarousel(categoryFilter, sectionId) {
     right_arrow_button.classList.add("right-arrow");
     right_arrow_button.innerText = ">";
 
-    fetch(endpoint + categoryFilter)
+    fetch(endpoint + category_filter)
       .then(response => response.json())
       .then(data => {
         const movies = data.results;
@@ -93,16 +93,16 @@ function displayMovieCarousel(categoryFilter, sectionId) {
 function buildWebsite(){
 
     // 1 - Fetch and display Best Movie information
-    displayBestRatedMovie(bestMoviesFilter)
+    displayBestRatedMovie(best_movies_filter)
 
      // 2 - Fetch and display Top movies of all categories in a carousel
-    displayMovieCarousel(bestMoviesFilter + pageSizeFilter, 'topRatedMoviesSection')
+    displayMovieCarousel(best_movies_filter + page_size_filter, 'topRatedMoviesSection')
 
     // 3 - Fetch and display Top movies for each of the three optional categories in a carousel
     for (let i = 0; i < categories.length; i++)  {
-        let categoryFilter = bestMoviesFilter + pageSizeFilter + categoryFilterRoot + categories[i]
-        let sectionId = categories[i] + 'MoviesSection'
-        displayMovieCarousel(categoryFilter, sectionId)
+        let category_filter = best_movies_filter + page_size_filter + category_filter_root + categories[i]
+        let section_id = categories[i] + 'MoviesSection'
+        displayMovieCarousel(category_filter, section_id)
     }
 }
 
