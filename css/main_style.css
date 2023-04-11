@@ -1,23 +1,47 @@
 /***** Custom CSS******/
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.right{
+    float: right;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.mb40{
+    margin-bottom:40px;
+}
+.mt20{
+    margin-top:20px;
+}
+
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.shadow{
+	-webkit-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+	box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 /******************* Navbar ********************/
 .nav-header {
-  position:fixed;
-  top: 0;
-  width:70%;
-  margin-left:15%;
-  background: #343a40;
-  z-index:1;
+    position:fixed;
+    top: 0;
+    width:70%;
+    margin-left:15%;
+    background: #343a40;
+    z-index:1;
 }
 
 .nav-container {
@@ -52,167 +76,168 @@ body {
     color: #fff;
 }
 
-
 /******************* main container ********************/
 .page-container{
-  padding: 20px;
-  margin-top: 80px;
-  margin-left:auto;
-  margin-right:auto;
-  width:70%;
-
+    padding: 20px;
+    margin-top: 80px;
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
 }
 
-   .section {
-            width: 100%;
-            height: 100%;
-            }
+.section-title{
+    padding:10px;
+    background-color: #E4E3E0;
+    text-align:center;
+    margin-bottom:20px;
+}
+
 /******************* best movie section  ********************/
 
 .best-movie-container{
-  display: flex;
-  flex-direction:row-reverse;
-}
-
-.best-movie-text-area{
-   padding:20px;
+    display: flex;
+    flex-direction:row-reverse;
+    align-content: center;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right:20px;
 }
 
 .best-movie-play-btn{
- border-radius: 10px;
- width: 80px;
- padding: 5px;
- cursor: pointer;
- transition-duration: 0.4s;
- background-color: white;
- color: black;
-  border: 2px solid #f44336;
+    border-radius: 10px;
+    width: 80px;
+    padding: 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #f44336;
 }
 
 .best-movie-play-btn:hover{
-  background-color: #f44336;
-  color: white;
+    background-color: #f44336;
+    color: white;
 }
 
 .best-movie-image img:hover {
-  transform: scale(1.1);
-  transition: 0.4s;
+    transform: scale(1.1);
+    transition: 0.4s;
 }
 
 /******************* category movies section ********************/
 
 .left-arrow, .right-arrow {
-  cursor: pointer;
-  height:50px;
-  width:50px;
-  border-radius: 5px;
-  border-style:none;
-  transition-duration: 0.4s;
-  font-size: 15px;
-  font-wight:bold;
-  color:#343a40;
-  background-color: lightgrey;
-  align-content: center;
+    cursor: pointer;
+    height:50px;
+    width:50px;
+    border-radius: 5px;
+    border-style:none;
+    transition-duration: 0.4s;
+    font-size: 15px;
+    font-wight:bold;
+    color:#343a40;
+    background-color: lightgrey;
+    align-content: center;
 }
 
 .left-arrow{
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .left-arrow:hover, .right-arrow:hover{
-  background-color: #343a40;
-  color: white;
+    background-color: #343a40;
+    color: white;
 }
 
 .carousel-container{
-   display: flex;
-   align-items: center;
-   gap: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 
 .carousel-inner{
-  overflow:hidden;
+    overflow:hidden;
 }
 
 .carousel-movies {
-  display: grid;
-  align-content: center;
-  width: 700%;
-  gap: 1em;
-  transition: transform 330ms ease-in-out;
-  grid-template-columns: repeat(7, auto); /* 7 columns with size auto */
+    display: grid;
+    align-content: center;
+    width: 700%;
+    gap: 1em;
+    transition: transform 330ms ease-in-out;
+    grid-template-columns: repeat(7, auto); /* 7 columns with size auto */
 }
 
 .carousel-movie img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  transition: 0.4s;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .carousel-movie img:hover {
-  transform: scale(1.1);
-  transition: 0.4s;
+    transform: scale(1.1);
+    transition: 0.4s;
 }
 
 /******************* Modal********************/
 
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 em {
-  font-weight: bold;
-  font-style:normal;
+    font-weight: bold;
+    font-style:normal;
 }
 
  .modal {
-  display: none;
-  position: fixed;
-  z-index: 3;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    display: none;
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .modal-inner {
-  background-color: lightgrey;
-  color: #1f4d4d;
-  margin: 20% auto;
-  padding: 20px;
-  border-radius: 15px;
-  width: 70%;
+    background-color: lightgrey;
+    color: #1f4d4d;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 70%;
 }
 
 .close-modal-btn {
-  padding: 0.25rem 0.7rem;
-  background: #eee;
-  border-radius: 50%;
-  cursor: pointer;
-  float:right;
+    padding: 0.25rem 0.7rem;
+    background: #eee;
+    border-radius: 50%;
+    cursor: pointer;
+    float:right;
 }
 
 .open-modal-btn {
-  cursor: pointer;
+    cursor: pointer;
 }
-
 
 /******************* Media queries ********************/
 
 @media (max-width: 640px){
-   .best-movie-container{flex-direction:column; align-items: center;}
-   .left-arrow, .right-arrow { width: 180px}
-   .modal{overflow: auto;}
-   .nav-container{gap: 10%;}
+    .best-movie-container{flex-direction:column; align-items: center;}
+    .left-arrow, .right-arrow { width: 180px}
+    .modal{overflow: auto;}
+    .nav-container{gap: 10%;}
+    .best-movie-text-area {margin-top: 10px;}
    }
 
 @media (min-width: 640px) {
-   .carousel-movies {width: 175%; }  /* 700% / 4 = 175% */
-   .modal-inner { margin: 7% auto;}
+    .carousel-movies {width: 175%; }  /* 700% / 4 = 175% */
+    .modal-inner { margin: 7% auto;}
 }
 
 /******************* footer ********************/
@@ -226,8 +251,8 @@ em {
 }
 
 .footer-container {
- display:flex;
- flex-direction:column;
- align-items: center;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
 
 }
