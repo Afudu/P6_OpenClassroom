@@ -1,6 +1,6 @@
 const ENDPOINT = "http://localhost:8000/api/v1/titles/";
 const BEST_MOVIES_FILTER = '?sort_by=-imdb_score'
-const NUMBER_OF_CATEGORY_IMAGES  = 7
+const NUMBER_OF_CATEGORY_IMAGES = 7
 const PAGE_FILTER_SIZE = '&page_size='+ NUMBER_OF_CATEGORY_IMAGES
 const CATEGORY_FILTER_ROOT = '&genre_contains='
 const CATEGORIES = ['biography', 'comedy', 'history']
