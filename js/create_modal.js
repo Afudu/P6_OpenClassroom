@@ -4,14 +4,14 @@
 // Box Office result ; Movie summary
 
 function createModal(movie_id) {
-    const modal = document.getElementById("modalSection");
+    let modal = document.getElementById("modalSection");
     // Modal opening based on id => img = first class element
-    const modal_img_div = document.getElementsByClassName("modal-img")[0];
-    const modal_details_div = document.getElementsByClassName("modal-details")[0];
-    const close_modal_btn = document.getElementsByClassName("close-modal-btn")[0];
+    let modal_img_div = document.getElementsByClassName("modal-img")[0];
+    let modal_details_div = document.getElementsByClassName("modal-details")[0];
+    let close_modal_btn = document.getElementsByClassName("close-modal-btn")[0];
     modal.style.display = "block";
 
-    fetch(endpoint + movie_id)
+    fetch(ENDPOINT + movie_id)
       .then(function(response) {
         if (response.ok) {
             return response.json();
@@ -86,10 +86,10 @@ function createModal(movie_id) {
 //format date from us to eu
 function formatDate(input_date) {
   // Split the date string into year, month, and day
-  const parts = input_date.split("-");
-  const year = parts[0];
-  const month = parts[1];
-  const day = parts[2];
+  let parts = input_date.split("-");
+  let year = parts[0];
+  let month = parts[1];
+  let day = parts[2];
 
   // Return the date in dd/mm/yyyy format
   return `${day}/${month}/${year}`;

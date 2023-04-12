@@ -1,14 +1,14 @@
-const endpoint = "http://localhost:8000/api/v1/titles/";
-const best_movies_filter = '?sort_by=-imdb_score'
-const number_of_category_images  = 7
-const page_size_filter = '&page_size='+ number_of_category_images
-const category_filter_root = '&genre_contains='
-const categories = ['biography', 'comedy', 'history']
+const ENDPOINT = "http://localhost:8000/api/v1/titles/";
+const BEST_MOVIES_FILTER = '?sort_by=-imdb_score'
+const NUMBER_OF_CATEGORY_IMAGES  = 7
+const PAGE_FILTER_SIZE = '&page_size='+ NUMBER_OF_CATEGORY_IMAGES
+const CATEGORY_FILTER_ROOT = '&genre_contains='
+const CATEGORIES = ['biography', 'comedy', 'history']
 
 // Script fetching best movie data
-function displayBestRatedMovie(best_movies_filter) {
+function displayBestRatedMovie(BEST_MOVIES_FILTER) {
   // Fetch best movie(= highest imdb) main data
-  fetch(endpoint + best_movies_filter)
+  fetch(ENDPOINT + BEST_MOVIES_FILTER)
     .then(response => response.json())
     .then(data => {
       // Get the best movie url and id
@@ -40,42 +40,42 @@ function displayBestRatedMovie(best_movies_filter) {
 //Script fetching and displaying movies of a given category
 function displayMovieCarousel(category_filter, section_id) {
 
-    const carousel_section = document.getElementById(section_id);
+    let carousel_section = document.getElementById(section_id);
 
-    const carousel_container_div = document.createElement('div');
+    let carousel_container_div = document.createElement('div');
     carousel_section.appendChild(carousel_container_div);
     carousel_container_div.classList.add("carousel-container");
 
-    const left_arrow_button = document.createElement('button');
+    let left_arrow_button = document.createElement('button');
     carousel_container_div.appendChild(left_arrow_button);
     left_arrow_button.classList.add("left-arrow");
     left_arrow_button.innerText = "<";
 
-    const carousel_inner_div = document.createElement('div');
+    let carousel_inner_div = document.createElement('div');
     carousel_container_div.appendChild(carousel_inner_div);
     carousel_inner_div.classList.add("carousel-inner");
 
-    const carousel_movies_div = document.createElement('div');
+    let carousel_movies_div = document.createElement('div');
     carousel_inner_div.appendChild(carousel_movies_div);
     carousel_movies_div.classList.add("carousel-movies");
 
-    const right_arrow_button = document.createElement('button');
+    let right_arrow_button = document.createElement('button');
     carousel_container_div.appendChild(right_arrow_button);
     right_arrow_button.classList.add("right-arrow");
     right_arrow_button.innerText = ">";
 
-    fetch(endpoint + category_filter)
+    fetch(ENDPOINT + category_filter)
       .then(response => response.json())
       .then(data => {
-        const movies = data.results;
+        let movies = data.results;
 
         // Add each image tag inside a div element
         movies.forEach((movie, index) => {
-          const image = movie.image_url;
-          const id = movie.id;
+          let image = movie.image_url;
+          let id = movie.id;
 
-          const img_div = document.createElement('div');
-          const img = document.createElement('img');
+          let img_div = document.createElement('div');
+          let img = document.createElement('img');
           img.src = image;
           img_div.appendChild(img);
           carousel_movies_div.appendChild(img_div);
@@ -93,15 +93,15 @@ function displayMovieCarousel(category_filter, section_id) {
 function buildWebsite(){
 
     // 1 - Fetch and display Best Movie information
-    displayBestRatedMovie(best_movies_filter)
+    displayBestRatedMovie(BEST_MOVIES_FILTER)
 
-     // 2 - Fetch and display Top movies of all categories in a carousel
-    displayMovieCarousel(best_movies_filter + page_size_filter, 'topRatedMoviesSection')
+     // 2 - Fetch and display Top movies of all CATEGORIES in a carousel
+    displayMovieCarousel(BEST_MOVIES_FILTER + PAGE_FILTER_SIZE, 'topRatedMoviesSection')
 
-    // 3 - Fetch and display Top movies for each of the three optional categories in a carousel
-    for (let i = 0; i < categories.length; i++)  {
-        let category_filter = best_movies_filter + page_size_filter + category_filter_root + categories[i]
-        let section_id = categories[i] + 'MoviesSection'
+    // 3 - Fetch and display Top movies for each of the three optional CATEGORIES in a carousel
+    for (let i = 0; i < CATEGORIES.length; i++)  {
+        let category_filter = BEST_MOVIES_FILTER + PAGE_FILTER_SIZE + CATEGORY_FILTER_ROOT + CATEGORIES[i]
+        let section_id = CATEGORIES[i] + 'MoviesSection'
         displayMovieCarousel(category_filter, section_id)
     }
 }
