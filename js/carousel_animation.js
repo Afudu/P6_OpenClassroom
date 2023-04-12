@@ -20,7 +20,7 @@ for (let i = 0; i < NUMBER_OF_CAROUSELS; i++) {
             position = Math.max(minPosition(), position - 1);
             INITIAL_POSITIONS[i] = position
             setArrowVisibility(position, left_arrow, right_arrow);
-            let translate = "translate(" + (1 / number_of_category_images) * 100 * position + "%)"
+            let translate = "translate(" + (1 / NUMBER_OF_CATEGORY_IMAGES) * 100 * position + "%)"
             carousel_movies.style.transform = translate;
             console.log("right-clicked - position = " + position + " / minPosition = " + minPosition());
         });
@@ -30,7 +30,7 @@ for (let i = 0; i < NUMBER_OF_CAROUSELS; i++) {
             position = Math.min(0, position + 1);
             INITIAL_POSITIONS[i] = position
             setArrowVisibility(position, left_arrow, right_arrow);
-            let translate = "translate(" + (1 / number_of_category_images) * 100 * position + "%)"
+            let translate = "translate(" + (1 / NUMBER_OF_CATEGORY_IMAGES) * 100 * position + "%)"
             carousel_movies.style.transform = translate;
             console.log("left-clicked - position = " + position + " / minPosition = " + minPosition());
             });
@@ -40,7 +40,7 @@ for (let i = 0; i < NUMBER_OF_CAROUSELS; i++) {
         position = Math.max(minPosition(), position);
         INITIAL_POSITIONS[i] = position
         setArrowVisibility(position, left_arrow, right_arrow);
-        var translate = "translate(" + (1 / number_of_category_images) * 100 * position + "%)"
+        var translate = "translate(" + (1 / NUMBER_OF_CATEGORY_IMAGES) * 100 * position + "%)"
         carousel_movies.style.transform = translate;
         console.log("change occurred - new position = "+ position + " / minPosition = " + minPosition());
         });
