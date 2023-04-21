@@ -83,8 +83,9 @@ function displayMovieCarousel(category_filter, section_id) {
           img_div.setAttribute("img-index", index);
 
           // Add a click event listener to each image to open a modal
-		  img_div.addEventListener("click", function () {createModal(id) })
-          })
+		  img.addEventListener("click", function () {createModal(id)
+		  })
+        })
       })
       .catch(error => console.error(error));
 }
