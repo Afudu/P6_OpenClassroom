@@ -27,11 +27,13 @@ function displayBestRatedMovie(BEST_MOVIES_FILTER) {
 
          let best_movie_img = document.getElementById("bestRatedMovie_img");
          best_movie_img.innerHTML = "<img align='right' width='182' height='280' src='"+data.image_url+"'>";
-         best_movie_img.classList.add("open-modal-btn");
 
           // Open modal and its attributes when button clicked
-         best_movie_img.addEventListener("click", function () {
+         let best_movie_modal = document.getElementsByClassName("open-modal-btn")[0];
+		 [best_movie_modal, best_movie_img].forEach(function(elements){
+		 elements.addEventListener("click", function () {
 		 createModal(best_movie_id);})
+		 })
       })
      })
     .catch(error => console.error(error));
