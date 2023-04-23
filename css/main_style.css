@@ -25,9 +25,10 @@ body {
     margin-top:20px;
 }
 
-.mb5{
-    margin-bottom: 5px;
+.m10{
+    margin: 10px;
 }
+
 
 .shadow{
 	-webkit-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
@@ -119,11 +120,14 @@ body {
     color: white;
 }
 
+.best-movie-image {
+    cursor: pointer;
+}
+
 .best-movie-image img:hover {
     transform: scale(1.1);
     transition: 0.4s;
 }
-
 /******************* category movies section ********************/
 
 .left-arrow, .right-arrow {
@@ -224,6 +228,7 @@ em {
 .open-modal-btn {
     cursor: pointer;
 }
+
 
 /******************* Media queries ********************/
 
