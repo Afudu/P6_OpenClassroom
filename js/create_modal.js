@@ -11,7 +11,7 @@ function createModal(movie_id) {
     let close_modal_btn = document.getElementsByClassName("close-modal-btn")[0];
     modal.style.display = "block";
 
-    fetch(ENDPOINT + movie_id)
+    fetch(ENTRYPOINT + movie_id)
       .then(function(response) {
         if (response.ok) {
             return response.json();
