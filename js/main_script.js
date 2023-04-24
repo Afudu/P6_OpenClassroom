@@ -1,4 +1,4 @@
-const ENDPOINT = "http://localhost:8000/api/v1/titles/";
+const ENTRYPOINT = "http://localhost:8000/api/v1/titles/";
 const BEST_MOVIES_FILTER = '?sort_by=-imdb_score'
 const NUMBER_OF_CATEGORY_IMAGES = 7
 const PAGE_FILTER_SIZE = '&page_size='+ NUMBER_OF_CATEGORY_IMAGES
@@ -8,7 +8,7 @@ const CATEGORIES = ['biography', 'comedy', 'history']
 // Script fetching best movie data
 function displayBestRatedMovie(BEST_MOVIES_FILTER) {
   // Fetch best movie(= highest imdb) main data
-  fetch(ENDPOINT + BEST_MOVIES_FILTER)
+  fetch(ENTRYPOINT + BEST_MOVIES_FILTER)
     .then(response => response.json())
     .then(data => {
       // Get the best movie url and id
@@ -66,7 +66,7 @@ function displayMovieCarousel(category_filter, section_id) {
     right_arrow_button.classList.add("right-arrow");
     right_arrow_button.innerText = ">";
 
-    fetch(ENDPOINT + category_filter)
+    fetch(ENTRYPOINT + category_filter)
       .then(response => response.json())
       .then(data => {
         let movies = data.results;
