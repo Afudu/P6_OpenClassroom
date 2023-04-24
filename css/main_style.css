@@ -166,7 +166,7 @@ body {
 .carousel-movies {
     display: grid;
     align-content: center;
-    width: 700%;
+    width: 700%;  /* 7x100% */
     gap: 1em;
     transition: transform 330ms ease-in-out;
     grid-template-columns: repeat(7, auto); /* 7 columns with size auto */
@@ -233,7 +233,7 @@ em {
 /******************* Media queries ********************/
 
 @media (max-width: 640px){
-    .best-movie-container{flex-direction:column; align-items: center;}
+    .best-movie-container{flex-direction:column;}
     .left-arrow, .right-arrow { width: 180px}
     .modal{overflow: auto;}
     .nav-container{gap: 10%;}
