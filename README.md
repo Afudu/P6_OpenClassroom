@@ -1,68 +1,99 @@
-# OpenClassroom - Python Developer Path
+# Develop a User Interface for a Python Web Application
 
-**Project 6:** Develop a User Interface for a Python Web Application
+**OpenClassrooms - Python Developer Path:** Project 6
 
 **Student:** Abdoul Baki Seydou
 
-**Date:** 01/02/2023
+**Date:** 01/02/2023 
 
-# Abstract
+## Table of Contents
+1. [Summary](#summary)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Project Tasks](#project-tasks)
+5. [Local Development](#local-development)
+   - [Prerequisites](#prerequisites)
+   - [Setup on macOS/Linux](#setup-on-macoslinux)
+   - [Setup on Windows](#setup-on-windows)
+   - [Running the Application](#running-the-application)
+   - [Screenshots](#screenshots)
 
+## Summary
 This project consists of creating for a client, JustStreamIt, a website written in HTML, 
-CSS and Vanilla Javascript without any other framework, allowing to visualise featured movie's data.
+CSS and Vanilla Javascript without any other framework, to visualise featured movie's data.
 
-In meeting the client's requirements:
+The data is fetched from a local version of a home-made API named [OCMovies-API-EN-FR](https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR).
 
-- The website design corresponds to the mock-up provided in the project brief, and displays five categories:   
-the "Best Movie" (with the highest IMDb rating), the seven "Top-Rated Movies", and the seven best movies of three optional categories(Biography, Comedy and History).
+## Features
+1. **Best Movie:** Display the with the highest IMDb rating.
+2. **Top-Rated Movies:** Display the seven Top-rated movies in all categories.
+3. **Category Top-Rated Movies:** Display the seven Top-rated movies of Biography, Comedy and History.
+4. **Cover image:** A movie in a category is represented by its cover image.
+5. **Modal:** Clicking on a featured movie’s image opens a modal window displaying its details.
 
-- A movie in a category is represented by its cover image.
+## Technologies Used
+- **Programming Languages:** Python, Javascript, HTML, CSS.
+- **Database:** SQLite.
 
-- Clicking on a featured movie’s image opens a modal window displaying the following information:
+## Project Tasks
+1. Create an index page in HTML/CSS of the mock-up provided.
+2. Create javascript files linked to the index.html, fetching and displaying the data.
 
-    The image of the movie cover,
-    Title,
-    Full genre,
-    Release date,
-    MPAA rating,
-    IMDb score,
-    Director(s),
-    List of actors,
-    Duration,
-    Country of origin,
-    Box Office result,
-    Movie summary.
+## Local Development
 
-# Data
-The data is fetched from a local version of a home-made API named OCMovies-API, and available 
-on the following code repository: https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
+### Prerequisites
+- Python 3.6 or higher.
 
-# Installation
-The following commands rely on the knowledge of how to use the terminal (Unix, macOS) or the command line (Windows).
+### Setup on macOS/Linux
 
-* Download and install OC Movies API from the following repository: 
-https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
+1. **Clone the Repository**
+   ```bash
+   cd /path/to/put/project/in
+   git clone https://github.com/Afudu/P6_OpenClassroom.git
 
-* Start the API server.
+2. **Move to the folder**
+   ```bash
+   cd P6_OpenClassroom
 
-Refer to the README file in the OCMovies-API-EN-FR repository for the steps to complete the installation 
-and launching of the API server.
+3. **Set Up Virtual Environment**
+   ```bash
+   python -m venv venv
+   
+4. **Activate Environment**
+   ```bash
+   source venv/bin/activate 
 
-# Running the application
+   
+7. **To deactivate Environment**
+   ```bash
+   deactivate
 
-With the server running from the step above:
+### Setup on Windows
 
- **1 - Get this repository**
-   * $ git clone https://github.com/Afudu/P6_OpenClassroom.git
+1. Follow the steps above.
 
- **2 - Move to the folder**
-   * Unix/macOS/Windows: cd P6_OpenClassroom
+2. To activate the environment:
+   ```bash
+   venv\Scripts\Activate
 
- **3 - Launch the file**
-   * Open the file index.html in your favorite web browser.
+### Running the application
 
-Note: The API server must be running to view the fetched data.
+1. Fetch the data repository:
+   ```bash
+   git clone https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR.git
 
-# Browser compatibility
-The website has been tested on Google Chrome (Version 111.0.5563.147), Mozilla Firefox (Version 111.0.1), 
-Microsoft Edge (Version 111.0.1661.54), and renders as expected.
+2. Move to the Data Repository and then Start the server:
+   ```bash
+   cd OCMovies-API-EN-FR && python manage.py runserver
+  
+3. With the server running, open in your favorite web browser the file ```index.html``` located in the 
+```P6_OpenClassroom``` directory.
+   ```bash
+   index.html
+
+## Screenshots
+
+![Best Movie](screenshots/best_movie.png "Best Movie")
+
+
+![Top Movies](screenshots/top_movies.png "Top Movies")
