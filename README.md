@@ -19,25 +19,30 @@
    - [Screenshots](#screenshots)
 
 ## Summary
-This project consists of creating for a client, JustStreamIt, a website written in HTML, 
-CSS and Vanilla Javascript without any other framework, to visualise featured movie's data.
-
-The data is fetched from a local version of a home-made API named [OCMovies-API-EN-FR](https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR).
+This project involves building a movie-focused web application for the client, **JustStreamIt**.
+The website, developed using HTML, CSS, and Vanilla JavaScript, 
+fetches and displays movie data from a locally hosted API [OCMovies-API-EN-FR](https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR).
+No external frameworks were used in the development.
 
 ## Features
-1. **Best Movie:** Display the with the highest IMDb rating.
-2. **Top-Rated Movies:** Display the seven Top-rated movies in all categories.
-3. **Category Top-Rated Movies:** Display the seven Top-rated movies of Biography, Comedy and History.
-4. **Cover image:** A movie in a category is represented by its cover image.
-5. **Modal:** Clicking on a featured movie’s image opens a modal window displaying its details.
+The application showcases movie data categorized into five sections:
+1. **Best Movie:** Displays the movie with the highest IMDb rating.
+2. **Top-Rated Movies:** Displays the seven Top-rated movies in all categories.
+3. **Biography Top-Rated Movies:** Displays the seven Top-rated movies in Biography.
+4. **Comedy Top-Rated Movies:** Displays the seven Top-rated movies in Comedy.
+5. **History Top-Rated Movies:** Displays the seven Top-rated movies in the History.
+
+**Note:**
+   - **Cover image:** Each movie is represented by its cover image.
+   - **Modal:** Clicking on a movie’s image opens a modal displaying its details.
 
 ## Technologies Used
 - **Programming Languages:** Python, Javascript, HTML, CSS.
 - **Database:** SQLite.
 
 ## Project Tasks
-1. Create an index page in HTML/CSS of the mock-up provided.
-2. Create javascript files linked to the index.html, fetching and displaying the data.
+1. **Frontend Development:** Create the application layout based on the provided mock-up.
+2. **Backend Integration:** Develop JavaScript files to fetch the data from the API and render it on the weppage.
 
 ## Local Development
 
@@ -77,11 +82,11 @@ The data is fetched from a local version of a home-made API named [OCMovies-API-
 
 ### Running the application
 
-1. Fetch the data repository:
+1. Fetch the Data Repository:
    ```bash
    git clone https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR.git
 
-2. Move to the Data Repository and then Start the server:
+2. Move to the Repository and then Start the server:
    ```bash
    cd OCMovies-API-EN-FR && python manage.py runserver
   
