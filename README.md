@@ -95,7 +95,7 @@ The application showcases movie data categorized into five sections:
    ```bash
    index.html
 
-## Screenshots
+### Screenshots
 
 ![Best Movie](screenshots/best_movie.png "Best Movie")
 
