@@ -42,7 +42,7 @@ The application showcases movie data categorized into five sections:
 
 ## Project Tasks
 1. **Frontend Development:** Create the application layout based on the provided mock-up.
-2. **Backend Integration:** Develop JavaScript files to fetch the data from the API and render it on the weppage.
+2. **Backend Integration:** Develop JavaScript files to fetch the data from the API and render it on the webpage.
 
 ## Local Development
 
